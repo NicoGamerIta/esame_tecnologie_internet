@@ -1,0 +1,419 @@
+/* Product Page Styles */
+.productPage {
+  --primary-color: #4f46e5;
+  --primary-light: #6366f1;
+  --primary-dark: #3730a3;
+  --secondary-color: #f97316;
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --gray-light: #f3f4f6;
+  --gray-medium: #d1d5db;
+  --gray-dark: #6b7280;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+  
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+}
+
+.breadcrumbs a {
+  color: var(--gray-dark);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary-color);
+}
+
+/* Product Container */
+.productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Product Image Section */
+.productImageSection {
+  position: relative;
+}
+
+.productBadges {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newBadge {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.nftBadge {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.mainImageContainer {
+  width: 100%;
+  height: 600px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-medium);
+  background-image: linear-gradient(45deg, var(--gray-medium) 25%, var(--gray-light) 25%, var(--gray-light) 50%, var(--gray-medium) 50%, var(--gray-medium) 75%, var(--gray-light) 75%, var(--gray-light) 100%);
+  background-size: 20px 20px;
+}
+
+/* Product Details */
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.productName {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.productPrice {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.colorSize {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.colorOption, .sizeOption , .genderOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.optionLabel {
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.colorValue, .sizeValue , .genderValue {
+  font-weight: 600;
+}
+
+.colorSwatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-medium);
+}
+
+/* Authenticity Section */
+.authenticitySection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--gray-light);
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+.authenticityIcon {
+  color: var(--primary-color);
+}
+
+.authenticityText p {
+  margin: 0 0 0.25rem 0;
+  font-weight: 500;
+}
+
+.viewOnChainLink {
+  font-size: 0.875rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: var(--transition);
+}
+
+.viewOnChainLink:hover {
+  text-decoration: underline;
+}
+
+.iconExternal {
+  margin-left: 0.25rem;
+}
+
+/* Quantity and Add to Cart */
+.quantityAddToCart {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.quantityButton {
+  background: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.quantityButton:hover {
+  background-color: var(--gray-light);
+}
+
+.quantityButton:disabled {
+  color: var(--gray-medium);
+  cursor: not-allowed;
+}
+
+.quantityValue {
+  width: 36px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.addToCartButton {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.addToCartButton:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Product Information Sections */
+.productInfoSections {
+  margin-top: 2rem;
+}
+
+.infoSection {
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.sectionToggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sectionContent {
+  padding: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-dark);
+}
+
+.productFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.productFeatures li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkIcon {
+  color: var(--success-color);
+}
+
+/* Shipping Section */
+.shippingItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.shippingIcon, .returnIcon {
+  margin-top: 0.25rem;
+}
+
+.shippingItem h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.shippingItem p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Blockchain Authentication */
+.nftDetails {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(79, 70, 229, 0.05);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--primary-color);
+}
+
+.nftDetail {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.nftDetailLabel {
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.nftDetailValue {
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.blockchainLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  transition: var(--transition);
+}
+
+.blockchainLink:hover {
+  text-decoration: underline;
+}
+
+/* Loading and Error States */
+.loadingContainer, .errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.errorContainer h2 {
+  margin-bottom: 1rem;
+  color: var(--error-color);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  transition: var(--transition);
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .productContainer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .productContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainImageContainer {
+    height: 450px;
+  }
+  
+  .colorSize {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .quantityAddToCart {
+    flex-direction: column;
+  }
+  
+  .quantitySelector {
+    width: 100%;
+    justify-content: center;
+  }
+}

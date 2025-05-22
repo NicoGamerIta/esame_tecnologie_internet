@@ -1,0 +1,355 @@
+.checkoutContainer {
+max-width: 1200px;
+margin: 0 auto;
+padding: 24px;
+}
+.checkoutHeader {
+margin-bottom: 32px;
+}
+.backButton {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: #666;
+text-decoration: none;
+margin-bottom: 16px;
+}
+.checkoutTitle {
+font-size: 28px;
+font-weight: 600;
+margin: 0;
+}
+.checkoutContent {
+display: grid;
+grid-template-columns: 1fr;
+gap: 32px;
+}
+@media (min-width: 768px) {
+.checkoutContent {
+grid-template-columns: 1fr 1fr;
+}
+}
+.orderSummary, .paymentSection {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+padding: 24px;
+}
+.summaryTitle, .paymentTitle {
+font-size: 20px;
+font-weight: 600;
+margin: 0 0 20px;
+}
+.summaryItems {
+margin-bottom: 24px;
+}
+.summaryItem {
+display: flex;
+padding: 12px 0;
+border-bottom: 1px solid #eee;
+}
+.itemImage {
+width: 80px;
+height: 80px;
+overflow: hidden;
+background-color: #f5f5f5;
+border-radius: 4px;
+margin-right: 16px;
+}
+.imagePlaceholder {
+width: 100%;
+height: 100%;
+background-color: #eee;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.itemDetails {
+flex: 1;
+}
+.itemName {
+margin: 0 0 4px;
+font-size: 16px;
+font-weight: 500;
+}
+.itemPrice {
+margin: 0;
+font-size: 14px;
+color: #666;
+}
+.itemTotal {
+font-weight: 600;
+font-size: 16px;
+}
+.summaryTotals {
+padding-top: 16px;
+}
+.summaryRow {
+display: flex;
+justify-content: space-between;
+margin-bottom: 12px;
+font-size: 16px;
+}
+.total {
+font-size: 20px;
+font-weight: 600;
+margin-top: 16px;
+padding-top: 16px;
+border-top: 1px solid #eee;
+}
+.walletInfo {
+margin-bottom: 24px;
+padding: 16px;
+background-color: #f9f9f9;
+border-radius: 8px;
+}
+.walletTitle {
+margin: 0 0 12px;
+font-size: 16px;
+font-weight: 500;
+}
+.walletAddress {
+display: flex;
+align-items: center;
+gap: 8px;
+font-family: monospace;
+color: #666;
+}
+.paymentOptions {
+margin-bottom: 24px;
+}
+.paymentOption {
+margin-bottom: 12px;
+}
+.paymentOption input[type="radio"] {
+display: none;
+}
+.paymentLabel {
+display: flex;
+align-items: center;
+padding: 16px;
+border: 1px solid #ddd;
+border-radius: 8px;
+cursor: pointer;
+transition: border-color 0.3s ease;
+}
+.paymentOption input[type="radio"]:checked + .paymentLabel {
+border-color: #333;
+background-color: #f9f9f9;
+}
+.optionIcon {
+width: 32px;
+height: 32px;
+margin-right: 16px;
+background-color: #f5f5f5;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.coinIcon {
+width: 24px;
+height: 24px;
+}
+.optionDetails {
+flex: 1;
+}
+.optionName {
+display: block;
+font-weight: 500;
+margin-bottom: 4px;
+}
+.optionInfo {
+font-size: 14px;
+color: #666;
+}
+.checkoutButton {
+width: 100%;
+padding: 16px;
+background-color: #111;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+transition: background-color 0.3s ease;
+}
+.checkoutButton:hover {
+background-color: #333;
+}
+.checkoutButton:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+.secureNote {
+display: flex;
+align-items: center;
+gap: 8px;
+margin-top: 16px;
+font-size: 14px;
+color: #666;
+text-align: center;
+justify-content: center;
+}
+/* Shipping Address Styles */
+.shippingAddress {
+margin-bottom: 24px;
+padding: 16px;
+background-color: #f9f9f9;
+border-radius: 8px;
+}
+.shippingTitle {
+margin: 0 0 16px;
+font-size: 16px;
+font-weight: 500;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.addressForm {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+.inputGroup {
+display: flex;
+flex-direction: column;
+gap: 4px;
+}
+.inputGroup label {
+font-size: 14px;
+color: #666;
+font-weight: 500;
+}
+.inputGroup input {
+padding: 10px 12px;
+border: 1px solid #ddd;
+border-radius: 6px;
+font-size: 14px;
+width: 100%;
+}
+.inputGroup input:focus {
+outline: none;
+border-color: #333;
+}
+.inputRow {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+.paymentMethodTitle {
+margin: 0 0 16px;
+font-size: 16px;
+font-weight: 500;
+}
+.orderSuccess {
+max-width: 600px;
+width: 100%;
+margin: 0 auto;
+text-align: center;
+padding: 40px;
+background-color: white;
+border-radius: 16px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+position: relative;
+overflow: hidden;
+animation: fadeIn 0.6s ease-out;
+}
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.orderSuccess::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 6px;
+background: linear-gradient(90deg, #4CAF50, #8BC34A);
+}
+.successIcon {
+width: 80px;
+height: 80px;
+background-color: #4CAF50;
+color: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 40px;
+margin: 0 auto 24px;
+box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+.orderSuccess h2 {
+font-size: 28px;
+font-weight: 700;
+margin: 0 0 16px;
+color: #333;
+}
+.orderSuccess p {
+font-size: 16px;
+line-height: 1.6;
+color: #666;
+margin-bottom: 16px;
+}
+.orderSuccess p:nth-of-type(3) {
+background-color: #f5f5f5;
+padding: 12px 16px;
+border-radius: 8px;
+font-family: monospace;
+font-size: 14px;
+display: inline-block;
+border: 1px dashed #ddd;
+}
+.shippingConfirmation {
+margin: 16px 0;
+padding: 16px;
+background-color: #f9f9f9;
+border-radius: 8px;
+}
+.shippingConfirmation p {
+margin: 8px 0;
+font-size: 15px;
+line-height: 1.4;
+}
+.continueShopping {
+display: inline-block;
+background-color: #333;
+color: white;
+text-decoration: none;
+padding: 14px 32px;
+border-radius: 8px;
+font-weight: 600;
+margin-top: 24px;
+transition: all 0.3s ease;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.continueShopping:hover {
+background-color: #222;
+transform: translateY(-2px);
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.orderSuccess::after {
+content: '';
+position: absolute;
+top: -20px;
+right: -20px;
+width: 120px;
+height: 120px;
+background: radial-gradient(circle, rgba(139, 195, 74, 0.2) 0%, rgba(139, 195, 74, 0) 70%);
+border-radius: 50%;
+z-index: -1;
+}

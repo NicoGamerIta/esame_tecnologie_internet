@@ -1,0 +1,592 @@
+/* Global Styles */
+.main {
+  --primary-color: #4f46e5;
+  --primary-light: #6366f1;
+  --primary-dark: #3730a3;
+  --secondary-color: #f97316;
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --gray-light: #f3f4f6;
+  --gray-medium: #d1d5db;
+  --gray-dark: #6b7280;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+  
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.primaryButton {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.secondaryButton {
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.secondaryButton:hover {
+  background-color: var(--gray-light);
+}
+
+.outlineButton {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.outlineButton:hover {
+  background-color: var(--gray-light);
+}
+
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 80px;
+}
+
+.logo {
+  width: 7vw;
+  letter-spacing: 0.05em;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.navLink.active {
+  color: var(--primary-color);
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 1px;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius);
+  outline: none;
+  width: 200px;
+  transition: var(--transition);
+}
+
+.searchInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.searchButton {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-dark);
+}
+
+.walletButton {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.walletButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.walletButton.connected {
+  background-color: var(--success-color);
+}
+
+.cartButton {
+  position: relative;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--error-color);
+  color: white;
+  font-size: 0.75rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.languageButton {
+  padding: 0.5rem;
+  background: none;
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.orderHistoryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 8px;
+  color: #333;
+  transition: color 0.2s ease;
+  width: 20px;
+}
+
+.orderHistoryButton:hover {
+  color: #000;
+}
+
+.iconOrderHistory {
+  stroke-width: 1.5;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: white;
+  padding: 6rem 1rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 1rem;
+  background-color: var(--gray-light);
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.featureDescription {
+  color: var(--gray-dark);
+}
+
+/* Products Section */
+.products {
+  padding: 4rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.productCard {
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.productImageContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; 
+  background-color: var(--gray-light);
+}
+
+.productImageContainer img {
+  width: 100%;            
+  height: 100%;              
+  object-fit: cover;  
+  object-position: center center;
+}
+
+
+.imagePlaceholder {
+  width: 100%;
+  height: 300px;
+  background-color: var(--gray-medium);
+  background-image: linear-gradient(45deg, var(--gray-medium) 25%, var(--gray-light) 25%, var(--gray-light) 50%, var(--gray-medium) 50%, var(--gray-medium) 75%, var(--gray-light) 75%, var(--gray-light) 100%);
+  background-size: 20px 20px;
+}
+
+.productNftBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(79, 70, 229, 0.9);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.productInfo {
+  padding: 1.5rem;
+}
+
+.productName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.productDescription {
+  color: var(--gray-dark);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productPrice {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.addToCartButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.addToCartButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.viewAllContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Blockchain Advantage */
+.blockchainAdvantage {
+  padding: 4rem 1rem;
+  background-color: var(--gray-light);
+}
+
+.blockchainContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.blockchainContent {
+  flex: 1;
+}
+
+.blockchainTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.blockchainDescription {
+  color: var(--gray-dark);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.blockchainImage {
+  flex: 1;
+  width: 10%;
+}
+
+.blockchainImagePlaceholder {
+  width: 100%;
+  height: 300px;
+  background-color: var(--gray-medium);
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(45deg, var(--gray-medium) 25%, var(--gray-light) 25%, var(--gray-light) 50%, var(--gray-medium) 50%, var(--gray-medium) 75%, var(--gray-light) 75%, var(--gray-light) 100%);
+  background-size: 20px 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 4rem 1rem 2rem;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerLogo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footerLogo a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerNav {
+  display: flex;
+  gap: 4rem;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footerTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footerLink:hover {
+  color: white;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.socialIcon:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .blockchainContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .featuresContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .footerContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footerNav {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .searchInput {
+    width: 150px;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
